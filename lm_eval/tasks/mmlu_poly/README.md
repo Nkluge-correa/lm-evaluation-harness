@@ -32,7 +32,7 @@ Homepage: https://github.com/hendrycks/test
 
 #### Groups
 
-- `mmlu_poly`: Evaluates all `mmlu_poly_{lang}` tasks
+- None
 
 #### Tasks
 
