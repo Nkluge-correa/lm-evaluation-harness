@@ -32,11 +32,11 @@ Homepage: https://zenodo.org/record/2630551#.X4Xzn5NKjUI
 
 #### Groups
 
-- `lambada_poly`: Evaluates all `lambada_poly_{lang}` tasks
+- None
 
 #### Tasks
 
-- `lambada_poly_{de, es, fr, it, nl, pt}`: These are LAMBADA tasks in different languages (German, Spanish, French, Italian, Dutch, Portuguese) introduced in the Polyglot evaluation hatness.
+- `lambada_poly_{de, es, fr, it, nl, pt}`: These are LAMBADA tasks in different languages (German, Spanish, French, Italian, Dutch, Portuguese) introduced in the Polyglot evaluation harness.
 
 ### Checklist
 
