@@ -27,7 +27,11 @@ Homepage: https://rowanzellers.com/hellaswag/
 
 #### Groups
 
-- `hellaswag_poly`: Evaluates all `hellaswag_poly_{lang}` tasks
+- None
+
+#### Tasks
+
+- `hellaswag_poly_{lang}`: These are HellaSwag tasks in different languages introduced in the Polyglot evaluation harness.
 
 <details>
 <summary><b>All languages supported</b></summary>
@@ -66,10 +70,6 @@ Homepage: https://rowanzellers.com/hellaswag/
 ```
 
 </details>
-
-#### Tasks
-
-- `hellaswag_poly_{lang}`: These are HellaSwag tasks in different languages introduced in the Polyglot evaluation harness.
 
 ### Checklist
 
