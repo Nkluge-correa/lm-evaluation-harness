@@ -164,9 +164,11 @@ def postprocess_pred(prediction: list[str]) -> list[str]:
 
 
 def string_match_all(preds: list[str], refs: list[list[str]]) -> float:
+    if not preds:
+        return 0.0
     score = sum(
         [
-            sum([1.0 if r.lower() in pred.lower() else 0.0 for r in ref]) / len(ref)
+            sum([1.0 if r.lower() in pred.lower() else 0.0 for r in ref]) / len(ref) if ref else 0.0
             for pred, ref in zip(preds, refs)
         ]
     ) / len(preds)
@@ -174,12 +176,13 @@ def string_match_all(preds: list[str], refs: list[list[str]]) -> float:
 
 
 def string_match_part(preds: list[str], refs: list[list[str]]) -> float:
-    score = max(
-        [
-            sum([1.0 if r.lower() in pred.lower() else 0.0 for r in ref]) / len(ref)
-            for pred, ref in zip(preds, refs)
-        ]
-    ) / len(preds)
+    if not preds:
+        return 0.0
+    scores = [
+        sum([1.0 if r.lower() in pred.lower() else 0.0 for r in ref]) / len(ref) if ref else 0.0
+        for pred, ref in zip(preds, refs)
+    ]
+    score = max(scores) / len(preds) if scores else 0.0
     return score
 
 
