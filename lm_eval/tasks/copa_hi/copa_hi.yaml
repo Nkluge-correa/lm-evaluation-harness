@@ -1,15 +1,12 @@
-task: piqa_bn
-dataset_path: hishab/piqa-bn
-dataset_name: null
+task: copa_hi
+dataset_path: ai4bharat/indic_glue 
+dataset_name: copa.hi
 output_type: multiple_choice
-training_split: train
 validation_split: validation
-test_split: null
-doc_to_text: "Question: {{goal}}\nAnswer:"
+test_split: test
+doc_to_text: !function utils.doc_to_text_hi
 doc_to_target: label
-doc_to_choice: "{{[sol1, sol2]}}"
-should_decontaminate: true
-doc_to_decontamination_query: goal
+doc_to_choice: !function utils.doc_to_choice
 metric_list:
   - metric: acc
     aggregation: mean
